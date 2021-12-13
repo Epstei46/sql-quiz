@@ -1,4 +1,6 @@
 """An interactive, REPL-style quizzer for SQL problems."""
+# link to my instructions for the exercise <https://ed.devmountain.com/materials/data-bp-1/exercises/sql-quiz/>
+# This is currently not functional, will just work in the .txt document instead.
 
 # Author: Joel Burton <joel@hackbrightacademy.com>, based on earlier work by
 # Christian Fernandez.
@@ -11,7 +13,7 @@ import datetime
 import psycopg2
 import hashlib
 import logging
-import readline
+# import readline
 
 log = logging.getLogger(__name__)
 
