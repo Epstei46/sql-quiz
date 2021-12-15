@@ -112,7 +112,7 @@ anywhere in the common name.
    WHERE common_name LIKE '%Golden%';
 
 9. Write a query that shows all the distinct regions that a salesperson can belong to.
-   SELECT (DISTINCT region) FROM Salespeople;
+   SELECT DISTINCT region FROM Salespeople;
 
 10. Write a query that shows the emails of all salespeople from both the
 Northwest and Southwest regions.
@@ -133,7 +133,7 @@ with the letter 'M'.
 13. Write a query that shows the melon type, common name, price, and the
 price of the melon given in euros. The 'melons' table has prices in dollars,
 and the dollar to euro conversion rate is 0.73.
-   SELECT m.type, m.common_name, m.price, m.price * 0.73 FROM Melons m;
+   SELECT m.melon_type, m.common_name, m.price, m.price * 0.73 FROM Melons m;
 
    ## SELECT m.type, m.common_name, m.price FROM melons m;
    ## UPDATE melons SET price=(price*0.73);
