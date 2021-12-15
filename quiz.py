@@ -1,6 +1,6 @@
 """An interactive, REPL-style quizzer for SQL problems."""
 # link to my instructions for the exercise <https://ed.devmountain.com/materials/data-bp-1/exercises/sql-quiz/>
-# UPDATE: Got this functioning with some help. Had to install PostgreSQL and $ pip3 install psycopg2. When I tried to run commands shown on the website, showed my username on my computer with an error. Then needed to open the psql shell (Windows search) and after logging in, enter: CREATE USER my_username WITH PASSWORD pick_password CREATEDB; createdb quiz; The cmd prompt line started with postgres=# instead of $. Another cmd I could have run was: GRANT ALL PRIVILEGES on DATABASE quiz TO my_username. The command to 'source the data to the empty postgres database' I think did not work in the bash terminal in VS Code, so I did that by navigating to this folder through the Command Prompt (Windows search) and entering it there. Then I was able to run this file in VS Code (py quiz.py) and complete the quiz in the terminal.
+## UPDATE: Got this functioning with some help. Had to install PostgreSQL and $ pip3 install psycopg2. When I tried to run commands shown on the website, showed my username on my computer with an error. Then needed to open the psql shell (Windows search) and after logging in, enter: CREATE USER my_username WITH PASSWORD pick_password CREATEDB; createdb quiz; The cmd prompt line started with postgres=# instead of $. Another cmd I could have run was: GRANT ALL PRIVILEGES on DATABASE quiz TO my_username. The command to 'source the data to the empty postgres database' I think did not work in the bash terminal in VS Code, so I did that by navigating to this folder through the Command Prompt (Windows search) and entering it there. Then I was able to run this file in VS Code (py quiz.py) and complete the quiz in the terminal.
 
 # Author: Joel Burton <joel@hackbrightacademy.com>, based on earlier work by
 # Christian Fernandez.
@@ -207,7 +207,7 @@ class Database():
     def connect():
         """Connect to DB and return cursor."""
 
-        conn = psycopg2.connect(dbname="quiz",user="postgres", password="Post42!")
+        conn = psycopg2.connect(dbname="quiz",user="postgres", password="secretSecret") # like actually secret
         conn.autocommit = True
         cursor = conn.cursor()
         return (cursor, conn)
